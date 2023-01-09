@@ -30,8 +30,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  //get all the bookNames from data
+  const books = data;
+  const paths = books.map((book) => ({
+    params: {
+      bookName: book.name.replace(" ", ""),
+    },
+  }));
   return {
-    paths: [{ params: { bookName: "1Nephi" } }],
+    paths: paths.flat(),
     fallback: true,
   };
 };
@@ -51,13 +58,24 @@ const Chapters = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="cursor-pointer pl-8 pt-4 font-[Garamound] font-semibold uppercase text-gray-600">
+      <div className="flex cursor-pointer flex-row items-center pl-8 pt-4 font-[Garamound] font-semibold uppercase text-gray-600">
         <Link className="hover:text-blue-500" href={"/"}>
           Book of Mormon
         </Link>
-        {" >"}{" "}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="h-5 w-5"
+        >
+          <path
+            fillRule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            clipRule="evenodd"
+          />
+        </svg>
         <Link className="hover:text-blue-500" href={"/book_of_mormon"}>
-          1 Nephi
+          {bookName}
         </Link>
       </div>
       <main className="mt-4 flex flex-col items-center font-[Garamound]">
