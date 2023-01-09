@@ -137,7 +137,7 @@ const Chapters = ({
         {" >"}{" "}
         <Link
           className="hover:text-blue-500"
-          href={`/book_of_mormon/${bookName.replace(" ", "")}`}
+          href={`/book_of_mormon/${bookName ? bookName.replace(" ", "") : ""}`}
         >
           {chapterNumber}
         </Link>
