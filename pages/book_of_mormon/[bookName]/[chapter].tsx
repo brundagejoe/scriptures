@@ -126,7 +126,7 @@ const Chapters = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex cursor-pointer flex-row items-center pl-8 pt-4 font-[Garamound] font-semibold uppercase text-gray-600">
+      <div className="flex cursor-pointer flex-row items-center pl-8 pt-4 font-semibold uppercase text-gray-600">
         <Link className="hover:text-blue-500" href={"/"}>
           Book of Mormon
         </Link>
@@ -164,8 +164,8 @@ const Chapters = ({
           {chapterNumber}
         </Link>
       </div>
-      <main className="mt-4 flex flex-col items-center font-[Garamound]">
-        <h1 className="mb-4 text-3xl font-bold uppercase">
+      <main className="mt-4 flex flex-col items-center">
+        <h1 className="mb-4 bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-stone-300 via-pink-500 to-blue-500 bg-clip-text text-3xl font-bold uppercase text-transparent">
           {bookName} {chapterNumber}
         </h1>
         <div

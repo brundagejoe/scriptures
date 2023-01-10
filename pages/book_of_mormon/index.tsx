@@ -20,17 +20,17 @@ export default function BookOfMormon({ bookNames }: { bookNames: string[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="cursor-pointer pl-8 pt-4 font-[Garamound] font-semibold uppercase text-gray-600">
+      <div className="cursor-pointer pl-8 pt-4 font-semibold uppercase text-gray-600">
         <Link className="hover:text-blue-500" href={"/"}>
           Book of Mormon
         </Link>
       </div>
-      <main className="mt-4 flex flex-col items-center font-[Garamound]">
+      <main className="mt-4 flex flex-col items-center bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-stone-300 via-pink-500 to-blue-500 bg-clip-text">
         {bookNames.map((bookName) => {
           return (
             <Link
               key={bookName}
-              className="cursor-pointer hover:text-blue-500"
+              className="cursor-pointer  text-transparent hover:text-blue-500"
               href={"/book_of_mormon/" + bookName.replace(" ", "")}
             >
               <h1 className="text-2xl font-semibold uppercase md:text-4xl">

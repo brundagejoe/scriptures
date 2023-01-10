@@ -20,9 +20,9 @@ export default function Home({ data }: { data: Book[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="mt-4 flex flex-col items-center text-center font-[Garamound]">
+      <main className="mt-4 flex flex-col items-center text-center">
         <Link
-          className="cursor-pointer hover:text-blue-500"
+          className="cursor-pointer bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-stone-300 via-pink-500 to-blue-500 bg-clip-text text-transparent hover:text-blue-500"
           href={"/book_of_mormon"}
         >
           <h1 className="text-4xl font-semibold uppercase">
