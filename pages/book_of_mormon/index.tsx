@@ -33,7 +33,9 @@ export default function BookOfMormon({ bookNames }: { bookNames: string[] }) {
               className="cursor-pointer hover:text-blue-500"
               href={"/book_of_mormon/" + bookName.replace(" ", "")}
             >
-              <h1 className="text-4xl font-semibold uppercase">{bookName}</h1>
+              <h1 className="text-2xl font-semibold uppercase md:text-4xl">
+                {bookName}
+              </h1>
             </Link>
           );
         })}

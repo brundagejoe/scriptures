@@ -172,7 +172,7 @@ const Chapters = ({
           className="mb-10 flex w-full flex-col items-center"
           onMouseUp={handleOnMouseUp}
         >
-          <div className="space-y-2">
+          <div className="space-y-2 px-8">
             {verses &&
               verses.map((verse, index) => (
                 <p key={index} className="max-w-lg text-justify">
